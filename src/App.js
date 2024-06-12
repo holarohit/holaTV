@@ -52,7 +52,6 @@ const App = ()=>{
    
    
    };
-     //
 
     document.addEventListener('keydown' , keyDownHandler);
 
