@@ -35,29 +35,16 @@ const App = ()=>{
   
   useEffect(()=>{
 
-   
   
-   const keyDownHandler = event =>{
-      console.log('user presed',event.key);
-       
-      if (event.key ==='Enter'){
-       
-       searchMovies(searchTerm)
-       event.preventDefault();
-       //searchMovies('')
-      }
+       searchMovies('')
+      
    
          
 
    
    
-   };
 
-    document.addEventListener('keydown' , keyDownHandler);
 
-   return () => {
-    document.removeEventListener('keydown',keyDownHandler)
-   }
 
   },[]);
 
@@ -68,7 +55,7 @@ const App = ()=>{
         <input
            placeholder="search for movies" id="my-text"
            value={searchTerm}
-           onClick={(e)=> setSerachTerm (e.target.value)}
+           onChange={(e)=> setSerachTerm (e.target.value)}
            //onChange={(e) => searchMovies('')}
         />
         
@@ -107,7 +94,7 @@ const App = ()=>{
 
       }
       
-   );
+   ;
 
 
 
