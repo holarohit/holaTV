@@ -68,7 +68,7 @@ const App = ()=>{
         <input
            placeholder="search for movies" id="my-text"
            value={searchTerm}
-           onTouchStart={(e)=> setSerachTerm (e.target.value)}
+           onClick={(e)=> setSerachTerm (e.target.value)}
            //onChange={(e) => searchMovies('')}
         />
         
